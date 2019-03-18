@@ -30,7 +30,7 @@ public class Archivo {
 
     public void EscribirPuntos(String competencia, String etiqueta, String puntos) {
         try {
-            BufferedReader com = new BufferedReader(new FileReader(new File("C:\\Users\\Antony-PC\\Documents\\NetBeansProjects\\Sistema Experto Difuso\\Archivos\\Competencias")));
+            BufferedReader com = new BufferedReader(new FileReader(new File("C:\\Users\\obito\\Desktop\\Sistema Experto Difuso\\Archivos\\Competencias")));
             int id = 0;
             String line1;
             while ((line1 = com.readLine()) != null) {
@@ -42,7 +42,7 @@ public class Archivo {
             }
             com.close();
             
-            BufferedReader leer = new BufferedReader(new FileReader(new File("C:\\Users\\Antony-PC\\Documents\\NetBeansProjects\\Sistema Experto Difuso\\Archivos\\Puntos")));
+            BufferedReader leer = new BufferedReader(new FileReader(new File("C:\\Users\\obito\\Desktop\\Sistema Experto Difuso\\Archivos\\Puntos")));
             String competencias = "";
             String line;
             while ((line = leer.readLine()) != null) {
@@ -53,7 +53,7 @@ public class Archivo {
             leer.close();
             competencias = competencias + id + " " + etiqueta + " " + puntos + "\n";
             System.out.println(competencias);
-            BufferedWriter escribir = new BufferedWriter(new FileWriter("C:\\Users\\Antony-PC\\Documents\\NetBeansProjects\\Sistema Experto Difuso\\Archivos\\Puntos"));
+            BufferedWriter escribir = new BufferedWriter(new FileWriter("C:\\Users\\obito\\Desktop\\Sistema Experto Difuso\\Archivos\\Puntos"));
             String[] esc = competencias.split("\n");
             for (int i = 0; i < esc.length; i++) {
                 escribir.write(esc[i]);
@@ -92,7 +92,7 @@ public class Archivo {
         String[] vec = {};
         String temporal = "";
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\Users\\Antony-PC\\Documents\\NetBeansProjects\\Sistema Experto Difuso\\Archivos\\Competencias")));
+            BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\Users\\obito\\Desktop\\Sistema Experto Difuso\\Archivos\\Competencias")));
             String line;
             while ((line = reader.readLine()) != null) {
                 System.out.println("Hola "+line);
@@ -111,7 +111,7 @@ public class Archivo {
 
     public void EscribirCompetencia(String competencia, String etiquetas) {
         try {
-            BufferedReader leer = new BufferedReader(new FileReader(new File("C:\\Users\\Antony-PC\\Documents\\NetBeansProjects\\Sistema Experto Difuso\\Archivos\\Competencias")));
+            BufferedReader leer = new BufferedReader(new FileReader(new File("C:\\Users\\obito\\Desktop\\Sistema Experto Difuso\\Archivos\\Competencias")));
             String competencias = "";
             int id = 0;
             String line;
@@ -124,7 +124,7 @@ public class Archivo {
             leer.close();
             competencias = competencias + (id + 1) + " " + competencia + " " + etiquetas + "\n";
             System.out.println(competencias);
-            BufferedWriter escribir = new BufferedWriter(new FileWriter("C:\\Users\\Antony-PC\\Documents\\NetBeansProjects\\Sistema Experto Difuso\\Archivos\\Competencias"));
+            BufferedWriter escribir = new BufferedWriter(new FileWriter("C:\\Users\\obito\\Desktop\\Sistema Experto Difuso\\Archivos\\Competencias"));
             String[] esc = competencias.split("\n");
             for (int i = 0; i < esc.length; i++) {
                 escribir.write(esc[i]);
